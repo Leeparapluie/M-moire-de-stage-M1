@@ -1,0 +1,289 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{a4wide} 
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{moreverb}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{float}
+\usepackage{glossaries}
+\usepackage{subfig}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage[table]{xcolor}
+\usepackage[toc,page]{appendix} 
+
+\newcounter{tblerows}
+\expandafter\let\csname c@tblerows\endcsname\rownum
+
+\definecolor{table_1_color}{RGB}{255, 255, 255}
+\definecolor{table_2_color}{RGB}{245, 245, 245}
+
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.5}
+
+\renewcommand{\appendixpagename}{Annexes}
+\renewcommand{\appendixtocname}{Annexes}
+
+% \renewcommand{\thesection}{\Alph{section}} 
+% \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\title{Mémoire de stage}
+\author{CRETEUR Tom}
+\date{Juin 2025}
+
+\makeglossaries
+
+\newglossaryentry{ADEME}
+{
+    name=ADEME,
+    description={Agence de la transition écologique, anciennement Agence de l'environnement et de la maîtrise de l'énergie / établissement public à caractère industriel et commercial (EPIC) français dont la vocation est de susciter, animer, coordonner, faciliter ou réaliser des opérations de protection de l'environnement}
+}
+\newglossaryentry{AEE}
+{
+    name=AEE,
+    description={Agence européenne pour l'environnement (AEE) / agence de l'Union européenne qui fournit des informations et des données à l'appui des objectifs européens en matière d'environnement et de climat}
+}
+\newglossaryentry{AGEC}
+{
+    name=AGEC,
+    description={(loi) Anti-Gaspillage pour une Economie Circulaire}
+}
+\newglossaryentry{AIDA}
+{
+    name=AIDA,
+    description={Site français d’information relatif au droit de l’environnement}
+}
+\newglossaryentry{BRGM}
+{
+    name=BRGM,
+    description={Bureau de Recherches Géologiques et Minières}
+}
+\newglossaryentry{CEREMA}
+{
+    name=CEREMA,
+    description={Centre d’Etudes et d’Expertise sur les Risques, l’Environnement, la Mobilité et l’Aménagement}
+}
+\newglossaryentry{Cerfa}
+{
+    name=Cerfa,
+    description={Il s'agit de tous les documents, quels qu'en soient la présentation et le support, y compris électronique, permettant à un usager d'accomplir une démarche administrative}
+}
+\newglossaryentry{DGPR}
+{
+    name=DGPR,
+    description={Direction générale de la prévention des risques}
+}
+\newglossaryentry{DREAL}
+{
+    name=DREAL,
+    description={Direction Régionale de l’Environnement, de l’Aménagement et du Logement}
+}
+\newglossaryentry{ERC}
+{
+    name=ERC,
+    description={Eviter, Réduire, Compenser (séquence)}
+}
+\newglossaryentry{ERP}
+{
+    name=ERP,
+    description={Etablissement Recevant du Public}
+}
+\newglossaryentry{ICPE}
+{
+    name=ICPE,
+    description={Installation Classée pour la Protection de l'Environnement}
+}
+\newglossaryentry{IGN}
+{
+    name=IGN,
+    description={Institut National de l’Information Géographique et Forestière}
+}
+\newglossaryentry{INERIS}
+{
+    name=INERIS,
+    description={Institut National de l’Environnement Industriel et des Risques}
+}
+\newglossaryentry{INRS}
+{
+    name=INRS,
+    description={Institut National de Recherche et de Sécurité}
+}
+\newglossaryentry{INSEE}
+{
+    name=INSEE,
+    description={Institut National de la Statistique et des Etudes Economiques}
+}
+\newglossaryentry{IOTA}
+{
+    name=IOTA,
+    description={Installations Ouvrages Travaux et Activités}
+}
+\newglossaryentry{MTD}
+{
+    name=MTD,
+    description={Meilleures Techniques Disponibles (principe)}
+}
+\newglossaryentry{OFB}
+{
+    name=OFB,
+    description={Office Français de la Biodiversité}
+}
+\newglossaryentry{PAC}
+{
+    name=PAC,
+    description={Porter à connaissance}
+}
+\newglossaryentry{PLU}
+{
+    name=PLU,
+    description={Plan local d’Urbanisme}
+}
+\newglossaryentry{PNM}
+{
+    name=PNM,
+    description={Parc Naturel Marin}
+}
+\newglossaryentry{PNR}
+{
+    name=PNR,
+    description={Parc Naturel Régional}
+}
+\newglossaryentry{PPRCS}
+{
+    name=PPRCS,
+    description={Plan de Prévention des Risques Cavités Souterraines}
+}
+\newglossaryentry{PPRi}
+{
+    name=PPRi,
+    description={Plan de Prévention des Risques Inondations}
+}
+\newglossaryentry{PPRMT}
+{
+    name=PPRMT,
+    description={Plan de Prévention des Risques Mouvements de Terrain}
+}
+\newglossaryentry{PPRS}
+{
+    name=PPRS,
+    description={Plan de Prévention des Risques Sismiques}
+}
+\newglossaryentry{PPRT}
+{
+    name=PPRT,
+    description={Plan de Prévention des Risques Technologiques}
+}
+\newglossaryentry{SCoT}
+{
+    name=SCoT,
+    description={Schéma de Cohérence Territoriale}
+}
+\newglossaryentry{SAGE}
+{
+    name=SAGE,
+    description={Schéma d’Aménagement et de Gestion des Eaux}
+}
+\newglossaryentry{SDAGE}
+{
+    name=SDAGE,
+    description={Schéma Directeur d’Aménagement et de Gestion des Eaux}
+}
+\newglossaryentry{SDIS}
+{
+    name=SDIS,
+    description={Service Départemental d’Incendie et de Secours}
+}
+\newglossaryentry{SUP}
+{
+    name=SUP,
+    description={Servitudes d’Utilité Publique}
+}
+\newglossaryentry{ZAN}
+{
+    name=ZAN,
+    description={Zéro Artificialisation Nette}
+}
+\newglossaryentry{ZNIEFF}
+{
+    name=ZNIEFF,
+    description={Zones Naturelles d’Intérêt Ecologique, Faunistique et Floristique}
+}
+
+
+\begin{document}
+
+    \thispagestyle{empty}
+    
+    \begin{center}
+        \makebox[\textwidth][l]{
+            \raisebox{0pt}[0pt][0pt]{
+                \includegraphics[scale=1]{Images/Evolutys.jpg}
+            }
+        }
+        \makebox[\textwidth][r]{
+            \raisebox{0pt}[0pt][0pt]{
+                \includegraphics[scale=1]{Images/Université.png}
+            }
+        }
+    
+        Université Jean Monnet Saint-Etienne\\
+        Master Géographie, Aménagement, Environnement et Développement\\
+        \vspace{3cm}
+        {\LARGE Mémoire de stage}\\
+        \vspace{1cm}
+        Effectué chez Evolutys \\
+        \vspace{1cm}
+        \shadowbox{
+            \begin{minipage}{1\textwidth}
+                \begin{center}
+                    {\Huge Réglementation des Installations Classées pour la Protection de l’Environnement (ICPE) et enjeux socio-environnementaux. L’exemple de la gestion des déchets et du développement des infrastructures dédiées.}\\
+                \end{center}
+            \end{minipage}
+        }\\
+        \vspace{2cm}
+        Créteur Tom\\
+        1e année -- Parcours SENTINELLES (Santé ENvironnemenT INformations spatio-temporELLES) \\
+        \vspace{3mm}
+        10 mars 2025 -- 30 juillet 2025 \\
+        \vspace{2cm}
+        {\renewcommand{\arraystretch}{1}
+            \begin{tabular}{p{10cm}p{10cm}}
+                {\bf Evolutys}                                            &{\bf Responsable de stage}\\
+                {\footnotesize 4 bis rue du Garat }       & ~~~Magrin Franck\\
+                {\footnotesize 42152 L’Horme}                                        & {\bf Tutrice pédagogique}\\
+                {\footnotesize }                          & ~~~Chasles Virginie\\
+            \end{tabular}
+        }
+    \end{center}
+    \newpage
+        
+    \tableofcontents
+    \listoffigures
+
+    \newpage
+    \printglossaries        
+
+    \include{chapters/0_Remerciements}
+    \include{chapters/00_Résumé}
+    \include{chapters/1_intro}
+    \include{chapters/2_réglementation}
+    \include{chapters/3_dossier}
+    \include{chapters/4_ICPE}
+    \include{chapters/5_conclusion}
+
+    \appendix
+    \include{annexe/6_Figures}
+    \include{annexe/7_Sitographie}
+    \include{annexe/8_Bibliographie} 
+    \include{annexe/9_rse} 
+
+
+\end{document}
